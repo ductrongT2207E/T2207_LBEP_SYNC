@@ -2,15 +2,11 @@
 #include <math.h>
 int main(){
 
-	float a;
+	float a,b,c;
 	printf("Nhap a=");
-	scanf("%f",&a);
-	
-	float b;
+	scanf("%f",&a);	
 	printf("Nhap b=");
 	scanf("%f",&b);
-	
-	float c;
 	printf("Nhap c=");
 	scanf("%f",&c);
 	
@@ -22,21 +18,22 @@ int main(){
 				printf("phuong trinh vo nghiem");
 			}
 		}else{
-			printf("phuong trinh co nghiem duy nhat x= %.2f",-c/b);
+			float x = -c/b;
+			printf("phuong trinh co nghiem duy nhat x= %f",-c/b);
 		}
+		
 	}else{
-		float delta;
-		delta = (b*b)-(4*a*c);
+		float delta = (b*b)-(4*a*c);
 		if(delta>0){
 			float x1;
 			float x2;
 			x1 = (-b+sqrt(delta))/(2*a);
             x2 = (-b-sqrt(delta))/(2*a);
-            printf("x1 = %.2f\n", x1);
-        	printf("x2 = %.2f", x2);
+            printf("x1 = %f\n", x1);
+        	printf("x2 = %f", x2);
 			}else if(delta==0){
-				float x = -b/ (2*a);
-				printf("phuong trinh co nghiem kep x =%.f", x);
+				float x = -b/(2*a);
+				printf("phuong trinh co nghiem x =%f", x);
 			}else{
 			printf("phuong trinh vo nghiem");
 		}
