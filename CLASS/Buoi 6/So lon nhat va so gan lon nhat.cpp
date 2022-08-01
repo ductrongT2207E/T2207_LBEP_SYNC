@@ -24,10 +24,11 @@ int main()
 	
 	for(i=2;i<n;i++)
 	{
-		if(ary[i]>high);
+		if(ary[i]>high)
+		{
 		second = high;
 		high = ary[i];
-		
+		}
 	}
 	printf("\nHighest value entered was %d", high);
 	printf("\nNearly highest value entered was %d", second);
