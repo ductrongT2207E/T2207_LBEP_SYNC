@@ -4,12 +4,10 @@ int main(){
 	printf("nhap n = ");
 	scanf("%d",&n);
 	
-	int i;
 	int z=0;
 	printf("Tong cac chu so cua %d la: ",n);
 	while(n>0){
-		i=n%10;
-		z=z+i;
+		z+=n%10;
 		n/=10;
 	}  
 	printf("%d",z);
