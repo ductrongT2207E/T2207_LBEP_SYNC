@@ -1,30 +1,29 @@
+//Nhap 1 mang n so nguyen, dam bao cac so nhap vao k bi trung nhau
 #include<stdio.h>
-int kiemtra(int n,int a[],int k){
-	for(int i=0;i<n;i++){
-		if(a[i]==k) return 1;
-	} return 0;
-}
-
 int main()
 {
 	int n;
 	printf("nhap n = ");
 	scanf("%d",&n);
-	
-	//nhap gia tri vao mang
 	printf("nhap %d so nguyen:\n",n);
-	int temp;
-	int a[n];
+
+	int a[n];	
 	for(int i=0;i<n;i++){
-		printf("Nhap a[%d]= ",i);
-		scanf("%d",&temp);
-		if(kiemtra(n,a,temp)==1){
-			printf("Gia tri bi trung vui long nhap lai!\n");
+		int flag=0;
+		scanf("%d",&a[i]);
+		for(int j=0;j<i;j++){
+			if(a[i]==a[j]){
+				printf("Gia tri bi trung vui long nhap lai!\n");
+				flag=1;
+				break;
+			} 
+		} 
+		if(flag==1){
 			i--;
 		}
-		else a[i]=temp;
 	}
-	printf("mang vua nhap la: ");
+	
+	printf("Mang vua nhap la: ");
 	for (int i=0;i<n;i++){	
 		printf("%d ",a[i]);
 	}
